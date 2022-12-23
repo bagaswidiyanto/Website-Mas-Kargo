@@ -1,0 +1,139 @@
+.news .entry-box:hover {
+    box-shadow: 0px 7px 18px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.news .entry-box .entry-img {
+    box-shadow: 0px 7px 18px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    }
+
+.news .entry-box .entry-img img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.news .entry-box .entry-meta p {
+    font-size: 14px;
+    color: #C7C7C7;
+}
+
+.news .entry-box .entry-content p {
+    font-size: 14px;
+}
+
+
+
+
+
+.news .entry-side .entry-title {
+    border-bottom: 1px solid #DFDFDF;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.news .entry-side .entry-title a {
+    font-size: 18px;
+    color: #767676;
+}
+
+.news .entry-side .entry-title a:hover {
+    color: #0D438D ;
+}
+
+
+.news .sidebar-post .box-shadow {
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.news .sidebar-post .sidebar-title {
+    font-size: 20px;
+    font-weight: 700;
+    padding: 0 0 0 0;
+    margin: 0 0 15px 0;
+    color: #0D438D;
+    position: relative;
+}
+
+.news .sidebar-post .tags ul {
+    padding: 0;
+}
+
+.news .sidebar-post .tags ul a {
+    color: #7B7B7B;
+    font-size: 14px;
+    padding: 6px 14px;
+    margin: 0 6px 8px 0;
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.3s;
+    background: #FFF7F4;
+}
+
+.news .sidebar-post .tags ul li {
+    display: inline-block;
+}
+
+
+
+
+
+.news .blog-pagination {
+    margin-top: 80px;
+}
+
+.news .blog-pagination .page-link {
+    padding: 0;
+    border: 0;
+}
+
+.news .blog-pagination .page-link a {
+    font-size: 14px;
+    font-weight: 700;
+    position: relative;
+    display: block;
+    padding: 0;
+    text-align: center;
+    margin-left: -1px;
+    line-height: 45px;
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    color: #8a8a8a;
+    border: 1px solid #f0e9ff;
+    margin-right: 10px;
+}
+
+.news .blog-pagination .page-link a:hover {
+    color: #0D438D;
+}
+
+.news .blog-pagination .page-link:hover {
+    background: transparent;
+}
+
+.news .blog-pagination .page-link i,
+.news .blog-pagination .page-link span {
+    font-size: 13px;
+}
+
+.news .blog-pagination .page-item.active .page-link {
+    background-color: #fff;
+    border-color: #f0e9ff;
+    color: #0D438D;
+}
+
+.news .blog-pagination .page-item:last-child .page-link {
+    margin-right: 0;
+}
+
+
+
+.single-news .box-single-news .entry-img img {
+    max-width: 70%;
+}
+
+.single-news .box-single-news .entry-content img {
+    width: 100%;
+}

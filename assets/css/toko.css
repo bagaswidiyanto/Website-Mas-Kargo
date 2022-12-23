@@ -1,0 +1,52 @@
+
+
+.toko .box-shopping:hover {
+    border: 1px solid #0D438D;
+}
+
+.toko .box-shopping .img{
+    width: 100%;
+    overflow: hidden;
+    height: calc(100% - 30%);
+}
+
+.toko .box-shopping .img img{
+    width: 100%;
+}
+
+.toko .box-shopping .content .title p {
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.toko .box-shopping .content .price h5 {
+    color: rgb(255, 153, 0);
+}
+
+.toko .box-shopping .content .star .fa {
+    color: rgb(255, 221, 0);
+}
+
+.toko .box-shopping .content .kota small {
+    color: rgba(0, 0, 0, 0.168);
+}
+
+.toko .box-shopping .content .button a {
+    font-size: 12px
+}
+
+
+.toko-detail .single img {
+    height: 400px;
+}
+
+.toko-detail .single .price h4 {
+    color: rgb(255, 153, 0);
+}
+
+.toko-detail .single .deskripsi h2 {
+    background: rgba(0,0,0,.02);
+    padding-left: 10px;
+}
+
+

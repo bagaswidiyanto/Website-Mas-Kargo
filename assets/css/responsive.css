@@ -1,0 +1,227 @@
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .tracking-home .box-blue h4 {
+        font-size: 18px;
+    }
+
+
+    .about-home .about-content .btn-compro div a {
+        font-size: 12px;
+    }
+}
+
+
+@media only screen and (max-width: 991px) {
+  
+    
+    /* .footer::after {
+        background: #fff;
+
+    } */
+
+    
+    .tracking-home::before {
+        display: none;
+    }
+
+    .tracking-home::after {
+        display: none;
+    }
+
+    .tracking-home .box-blue {
+        background: linear-gradient(180deg, #5B88C6 0%, #1E539C 100%);;
+    }
+
+    .cash-counter .content {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .why-home .why-content .c-title  {
+        padding: 0;
+    }
+    
+    .why-home .why-content .c-desk {
+        padding: 0;
+    }
+
+    .layanan .layanan-content .c-img img{
+        max-width: 50%;
+    }
+
+  
+    .karir-detail .header-karir .pt p {
+        padding: 0 1rem;
+    }
+
+    .moda-resume .modal-body .modal-header {
+        padding-left: 0;
+    padding-right: 0;
+    }
+
+}
+
+@media only screen and (max-width: 767px) {
+    .tracking .nav-tabs .nav-link {
+        width: 17vh;
+        padding: 12px 0;
+    }
+
+    .tracking .nav-tabs .nav-link img {
+        max-height: 30px;
+        margin-right: 0;
+    }
+
+    .tracking .nav-tabs .nav-link p {
+        font-size: 14px;
+    }
+
+
+    .service .nav-tabs {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+    }
+
+
+    .gallery .portfolio-wrap img {
+        height: 200px;
+      }
+
+    .hero-header .swiper-pagination.swiper-pagination-bullets {
+        bottom: 10px;
+    }
+    
+    
+    .hero-header .swiper-pagination-bullet {
+        width: 20px;
+        height: 3px;
+    }
+
+    .about-home .about-content .btn-compro div a {
+        font-size: 12px;
+    }
+
+    .cash-counter .row-content-md .col-lg-4 + .col-lg-4 {
+        border-top: 1px solid #000;
+    }
+
+    
+}
+
+@media only screen and (max-width: 600px) {
+    .service .nav-tabs .nav-link {
+        font-size: 10px;
+    }
+
+    .tracking .nav-tabs .nav-link {
+        width: 12vh;
+        padding: 5px 0;
+    }
+
+    .tracking .nav-tabs .nav-link img {
+        max-height: 22px;
+    }
+
+    .tracking .nav-tabs .nav-link p {
+        font-size: 10px;
+    }
+
+    #gallery-flters li {
+        font-size: 12px;
+    }
+
+    .hero-header .swiper-pagination-bullet {
+        width: 15px;
+    }
+
+    .client-home .img-client img {
+        max-width: 100%;
+    }
+
+    .about-home .about-content .btn-compro div a {
+        font-size: 13px;
+    }
+
+    .about-home .about-content .content {
+        padding: 10px 0;
+    }
+
+    .layanan .layanan-content .c-title h6 {
+        font-size: 14px;
+    }
+    
+
+    .layanan .layanan-content .c-desk p {
+        font-size: 13px;
+    }
+
+    .layanan .tab-content .border-row {
+        padding: 10px;
+    }
+
+    .layanan .tab-content .border-row h2 {
+        font-size: 20px;
+    }
+
+    .layanan .nav-tabs .nav-link {
+        padding: 5px 0.4rem;
+        font-size: 10px;
+      }
+
+    .kontak .box-address .address p {
+        margin-right: 0;
+    }
+
+    .profile .nav-tabs li a {
+        font-size: 10px;
+    }
+
+    .moda-resume .modal-body .form-box .phone label {
+        font-size: 18px;
+    }
+
+    .moda-resume .modal-body .form-box .phone input {
+        font-size: 18px;
+    }
+
+    .footer::after {
+        width: 100%;
+        border-bottom: 250px solid #fff;
+        border-left: 60px solid transparent;
+    }
+}
+
+
+
+@media only screen and (min-width: 1200px) and (max-width: 1400px)  {
+    .footer::after {
+        width: 45%;
+        border-bottom: 330px solid #fff;
+        border-left: 200px solid transparent;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px)  {
+    .footer::after {
+        width: 45%;
+        border-bottom: 380px solid #fff;
+        border-left: 200px solid transparent;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .footer::after {
+        width: 80%;
+        border-bottom: 200px solid #fff;
+        border-left: 200px solid transparent;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 767px)  {
+    .footer::after {
+        width: 100%;
+        border-bottom: 250px solid #fff;
+        border-left: 200px solid transparent;
+    }
+}
+

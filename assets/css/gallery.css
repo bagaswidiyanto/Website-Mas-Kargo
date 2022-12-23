@@ -1,0 +1,80 @@
+/*** Project gallery ***/
+#portfolio-flters {
+    display: inline-block;
+    padding: 10px 15px;
+}
+
+#portfolio-flters li {
+    display: inline-block;
+    font-weight: 500;
+    color: #000;
+    cursor: pointer;
+    transition: .1s;
+    border: 1px solid #000;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+#portfolio-flters li:hover,
+#portfolio-flters li.active {
+    color: #fff;
+    background: linear-gradient(180deg, #5B88C6 0%, #1E539C 100%);
+    border: 0;
+}
+
+
+.gallery .portfolio-wrap {
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    background: rgba(34, 34, 34, 0.6);
+}
+.gallery .portfolio-wrap::before {
+    content: "";
+    background: rgba(34, 34, 34, 0.6);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: all ease-in-out 0.3s;
+    z-index: 0;
+    opacity: 0;
+}
+
+
+.gallery .portfolio-wrap img {
+    width: 100%;
+    transition: all ease-in-out 0.3s;
+    height: 220px;
+}
+
+.gallery .portfolio-wrap:hover::before {
+  opacity: .6;
+}
+
+.gallery .portfolio-wrap:hover img {
+  transform: scale(1.2);
+}
+
+
+.goverlay {
+  background: rgba(0, 0, 0, 0.32);
+}
+
+.gslide-image img {
+  padding: 30px 30px 30px 30px;
+  background: #fff;
+  max-height: calc(70vh - 28px) !important; 
+}
+
+.glightbox-clean .gslide-title {
+  font-size: 1.7em;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.glightbox-clean .gdesc-inner {
+  padding: 0 20px 30px 20px;
+}

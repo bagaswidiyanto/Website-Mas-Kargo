@@ -1,0 +1,130 @@
+.karir .header-karir {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.karir .header-karir .pt p {
+    color: #fff !important;
+    font-weight: bold !important;
+}
+
+.karir .header-karir .form-control {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+
+.karir .box-karir {
+    border: 1px solid #000000;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: #ECECEC;
+}
+
+.karir .box-karir .conten-karir + .conten-karir {
+    border-top: 1px solid #000000;
+}
+
+.karir .box-karir .conten-karir .corporation h5 {
+    color: #2559A1;
+}
+
+.karir .box-karir .conten-karir .corporation p {
+    color: #2559A1;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.karir .box-karir .conten-karir .post-date p {
+    color: #2559A1;
+    font-size: 13px;
+}
+
+
+
+/* Karir Detail */
+.karir-detail .header-karir .bdr-b {
+    border-bottom: 2px solid #000;
+}
+
+.karir-detail h3 {
+    color: #2559A1;
+}
+
+.karir-detail p {
+    color: #2559A1;
+}
+
+.karir-detail .header-karir .pt p {
+    color: #2559A1;
+    padding: 0 5rem;
+    font-size: 12px;
+}
+
+.karir-detail .content ul {
+    list-style: inside;
+}
+
+.karir-detail .content ul li {
+    color: #2559A1;
+    list-style-type: disc;
+}
+
+.moda-resume .modal-body .modal-header {
+    padding-left: 8rem;
+    padding-right: 8rem;
+}
+
+.moda-resume .modal-body .modal-header h5 {
+    color: #2559A1;
+}
+
+.moda-resume .modal-body .form-box h4 {
+    color: #2559A1;
+}
+
+.moda-resume .modal-body .form-box .box-file {
+    border: 4px dashed #000;
+    padding: 30px;
+    text-align: center;
+}
+
+.moda-resume .modal-body .form-box .upld p {
+    color: #2559A1;
+}
+
+.moda-resume .modal-body .form-box .phone {
+    border: 1px solid #000;
+    padding: 20px;
+}
+
+.moda-resume .modal-body .form-box .phone label {
+    font-size: 24px;
+    color: #2559A1;
+    padding-right: 20px;
+    border-right: 2px solid;
+}
+
+.moda-resume .modal-body .form-box .phone input {
+    font-size: 24px;
+    margin-left: 10px;
+    color: #2559A1;
+}
+
+
+
+.moda-resume .modal-body .form-box .phone input:hover, 
+.moda-resume .modal-body .form-box .phone input:active, 
+.moda-resume .modal-body .form-box .phone input:focus
+{
+    outline:0px !important;
+    -webkit-appearance:none;
+    box-shadow: none !important;
+}
+
+.moda-resume .modal-body .form-box .note p {
+    color: red;
+}
+
+
+
