@@ -56,11 +56,11 @@ function hari($date)
             <!-- <div class="container"> -->
             <div class="row me-auto">
                 <div class="col-lg-6 col-md-8 px-0">
-                    <div class="float-left d-flex align-items-center py-2 px-5">
+                    <!-- <div class="float-left d-flex align-items-center py-2 px-5">
                         <img src="<?= base_url(); ?>assets/imagenew/top-phone.svg" class="img-fluid me-2" alt="">
                         <p class="fs-13 text-white">+62<?= $wa1 ?> | +62<?= $wa2 ?></p>
 
-                    </div>
+                    </div> -->
                 </div>
                 <div class="col-lg-6 col-md-4 text-center text-lg-end px-0">
                     <div

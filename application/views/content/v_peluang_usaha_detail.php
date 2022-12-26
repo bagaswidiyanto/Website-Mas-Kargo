@@ -32,8 +32,9 @@
                     </div>
                     <?php if ($peluangusaha->compro != '') { ?>
                     <div class="py-5 text-center">
-                        <a href="https://maskargo.digitalindo.co.id/upload/cash_counter/<?= $peluangusaha->image; ?>"
-                            class="bg-blue text-center py-3 px-3 rounded-10 text-uppercase"><?= @$_GET['lang'] == 'eng' ? $peluangusaha->title_eng : $peluangusaha->title ?></a>
+                        <a href="https://maskargo.digitalindo.co.id/upload/cash_counter/<?= $peluangusaha->compro; ?>"
+                            class="bg-blue text-center py-3 px-3 rounded-10 text-uppercase"
+                            target="_blank"><?= @$_GET['lang'] == 'eng' ? $peluangusaha->title_eng : $peluangusaha->title ?></a>
                     </div>
                     <?php } ?>
                 </div>
