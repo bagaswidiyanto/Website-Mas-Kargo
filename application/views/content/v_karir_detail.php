@@ -65,43 +65,41 @@ function time_ago($timestamp)
             <h2>KARIR</h2>
         </div>
         <div class="header-karir">
-            <div class="row justify-content-center text-center">
+            <div class="row justify-content-center text-center" hidden>
                 <div class="col-lg-4" data-aos="fade-up" data-aos-duration="1000">
                     <div class="img">
-                        <img src="https://maskargo.digitalindo.co.id/upload/<?= $website->image; ?>" class="img-fluid"
-                            alt="">
+                        <img src="https://maskargo.digitalindo.co.id/upload/<?= $website->image; ?>" class="img-fluid" alt="">
                     </div>
                 </div>
             </div>
-            <div class="row justify-content-between py-5 bdr-b">
+            <div class="row justify-content-between pt-5 pb-3 bdr-b">
                 <div class="col-lg-5 col-md-5 col-sm-6" data-aos="fade-up" data-aos-duration="1000">
-                    <div class="pt text-center px-lg-5">
+                    <div class="pt">
                         <h3><?= $karir->posisi; ?></h3>
                         <p>PT. Merpati Alam Semesta (Maskargo) Jakarta Timur, Indonesia</p>
-                        <button class="btn bg-blue mt-3 py-2 px-5 border-0 fw-bold" data-bs-toggle="modal"
-                            data-bs-target="#modalResume">Apply Now</button>
+
                     </div>
                 </div>
 
-                <div class="col-lg-5 col-md-5 col-sm-6 mt-4 mt-sm-0" data-aos="fade-up" data-aos-duration="1000">
+                <!-- <div class="col-lg-5 col-md-5 col-sm-6 mt-4 mt-sm-0" data-aos="fade-up" data-aos-duration="1000">
                     <div class="post-date text-center px-lg-5">
                         <p>Lowongan dipasang <?= time_ago($karir->create_date); ?></p>
                     </div>
-                </div>
+                </div> -->
 
                 <?php
                 if (isset($msg)) {
                     header("refresh:2;" . base_url('karir'));
                 }
                 ?>
-                <div class="mt-5" data-aos="fade-up" data-aos-duration="1000">
+                <div class="mt-2" data-aos="fade-up" data-aos-duration="1000">
                     <strong><?= @$msg; ?></strong>
                 </div>
             </div>
         </div>
         <div class="content">
             <div class="job py-4" data-aos="fade-up" data-aos-duration="1000">
-                <h3>Job Descriotion</h3>
+                <h3>Job Description</h3>
                 <div class="mt-4">
                     <?= $karir->job_deskripsi; ?>
                 </div>
@@ -120,6 +118,9 @@ function time_ago($timestamp)
                 </div>
             </div>
         </div>
+        <center class="mt-4">
+            <button class="btn bg-blue mt-3 py-2 px-5 border-0 fw-bold" data-bs-toggle="modal" data-bs-target="#modalResume">Apply Now</button>
+        </center>
     </div>
 
 </div>
@@ -157,8 +158,7 @@ function time_ago($timestamp)
                                 <h4 class="ms-3">Resume</h4><span class="text-danger">*</span>
                             </div>
                             <div class="box-file mt-5">
-                                <img src="assets/imagenew/file.png" alt=""><input type="file" name="file" class="ms-4"
-                                    required>
+                                <img src="assets/imagenew/file.png" alt=""><input type="file" name="file" class="ms-4" required>
                             </div>
                         </div>
 
@@ -170,8 +170,7 @@ function time_ago($timestamp)
                         <div class="mb-3">
                             <div class="phone">
                                 <label>+62</label>
-                                <input type="text" name="telp" class="border-0" placeholder="Telepon/Whatsapp"
-                                    onkeypress="return hanyaAngka(event)" required>
+                                <input type="text" name="telp" class="border-0" placeholder="Telepon/Whatsapp" onkeypress="return hanyaAngka(event)" required>
                             </div>
                             <div class="note pt-3">
                                 <p>Harap gunakan nomor telepon yg valid</p>
@@ -183,8 +182,7 @@ function time_ago($timestamp)
                             <textarea name="surat_lamaran" class="form-control mt-4" rows="7" required></textarea>
                         </div>
                         <div class="text-center mt-5">
-                            <input type="submit" class="btn bg-blue py-3 px-5 rounded-10 border-0"
-                                value="LAMAR SEKARANG">
+                            <input type="submit" class="btn bg-blue py-3 px-5 rounded-10 border-0" value="LAMAR SEKARANG">
                         </div>
                     </form>
                 </div>
@@ -192,8 +190,7 @@ function time_ago($timestamp)
 
             <!-- Modal footer -->
             <div class="modal-footer border-0">
-                <button type="button" class="btn btn-danger"
-                    data-bs-dismiss="modal"><?= @$_GET['lang'] == 'eng' ? 'Close' : 'Tutup' ?></button>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><?= @$_GET['lang'] == 'eng' ? 'Close' : 'Tutup' ?></button>
             </div>
 
         </div>
@@ -202,10 +199,10 @@ function time_ago($timestamp)
 
 
 <script>
-function hanyaAngka(evt) {
-    var charCode = (evt.which) ? evt.which : event.keyCode
-    if (charCode > 31 && (charCode < 48 || charCode > 57))
-        return false;
-    return true;
-}
+    function hanyaAngka(evt) {
+        var charCode = (evt.which) ? evt.which : event.keyCode
+        if (charCode > 31 && (charCode < 48 || charCode > 57))
+            return false;
+        return true;
+    }
 </script>

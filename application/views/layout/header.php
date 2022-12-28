@@ -114,7 +114,7 @@ function hari($date)
             <!-- </div> -->
         </div>
     </div>
-    <header id="header" class="header px-4 px-lg-5 py-3 py-lg-0">
+    <header id="header" class="header px-4 px-lg-5 py-1 py-lg-0">
         <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
             <a href="<?= base_url(); ?>" class="navbar-brand p-0">
                 <!-- <h1 class="m-0">FitApp</h1> -->
@@ -131,18 +131,39 @@ function hari($date)
                         } else {
                             $chevron = '';
                         }
+                        $hal = $this->uri->segment(1);
+
+                        if ($key->id == 9) {
+                            $link = (@$_GET['lang'] == 'eng' ? $key->title_eng != 'Home?lang=eng' : $key->title_indo != 'Beranda') ? (@$_GET['lang'] == 'eng' ? strtolower($key->slug) . '?lang=eng' : strtolower($key->slug)) : base_url();
+                        } else {
+                            $link = (@$_GET['lang'] == 'eng' ? $key->title_eng != 'Home?lang=eng' : $key->title_indo != 'Beranda') ? (@$_GET['lang'] == 'eng' ? strtolower($key->slug) . '?lang=eng' : base_url() . strtolower($key->slug)) : base_url();
+                        }
+
+                        if ($key->parent == 11) {
+                            $slg = $key->slug;
+                        }
                         ?>
 
-                    <li class="dropdown"><a class="nav-link scrollto <?php if ($key->slug != "") {
-                                                                                if ($this->uri->segment(1) == $key->slug) {
+
+
+                    <li class="dropdown">
+                        <a class="nav-link scrollto <?php if ($key->slug != "") {
+                                                            if ($this->uri->segment(1) == $key->slug) {
+                                                                echo "active";
+                                                            }
+                                                        } else {
+                                                            if ($this->uri->segment(1) == "") {
+                                                                echo "active";
+                                                            }
+                                                        } ?> 
+                                                                            <?php
+                                                                            if ($key->id == 9) {
+                                                                                if ($hal == 'peluangusaha') {
+                                                                                    echo "active";
+                                                                                } else if ($hal == $slg) {
                                                                                     echo "active";
                                                                                 }
-                                                                            } else {
-                                                                                if ($this->uri->segment(1) == "") {
-                                                                                    echo "active";
-                                                                                }
-                                                                            } ?>"
-                            href="<?= (@$_GET['lang'] == 'eng' ? $key->title_eng != 'Home?lang=eng' : $key->title_indo != 'Beranda') ? (@$_GET['lang'] == 'eng' ? strtolower($key->slug) . '?lang=eng' : strtolower($key->slug)) : base_url() ?>"
+                                                                            } ?>" href="<?= $link  ?>"
                             onclick="window.location.href='<?= (@$_GET['lang'] == 'eng' ? $key->title_eng != 'Home?lang=eng' : $key->title_indo != 'Beranda') ? (@$_GET['lang'] == 'eng' ? $key->slug . '?lang=eng' : $key->slug) : base_url() ?>';"><?= @$_GET['lang'] == 'eng' ? $key->title_eng : $key->title_indo ?>
                             <?= $chevron; ?></a>
                         <ul>
@@ -153,17 +174,38 @@ function hari($date)
                                     } else {
                                         $chevronSub = '';
                                     }
+
+                                    if ($c->id == 11) {
+                                        $linkSub = (@$_GET['lang'] == 'eng' ? $c->slug . '?lang=eng' : $c->slug);
+                                    } else {
+                                        $linkSub = base_url() . (@$_GET['lang'] == 'eng' ? $c->slug . '?lang=eng' : $c->slug);
+                                    }
                                     ?>
-                            <li class="dropdown"><a class="nav-link scrollto"
-                                    href="<?= (@$_GET['lang'] == 'eng' ? $c->slug . '?lang=eng' : $c->slug); ?>"
+                            <li class="dropdown"><a class="nav-link scrollto <?php if ($c->slug != "") {
+                                                                                            if ($this->uri->segment(1) == $c->slug) {
+                                                                                                echo "active";
+                                                                                            }
+                                                                                        } else {
+                                                                                            if ($this->uri->segment(1) == "") {
+                                                                                                echo "active";
+                                                                                            }
+                                                                                        } ?>" href="<?= $linkSub; ?>"
                                     onclick="window.location.href='<?= (@$_GET['lang'] == 'eng' ? $c->slug . '?lang=eng' : $c->slug) ?>';"><?= @$_GET['lang'] == 'eng' ? $c->title_eng : $c->title_indo ?>
                                     <?= $chevronSub; ?></a>
 
                                 <ul>
                                     <?php foreach ($this->db->query("SELECT * FROM tbl_navigation where parent='$c->id' and status='1' order by sort")->result() as $sub) { ?>
 
-                                    <li class="dropdown"><a class="nav-link scrollto"
-                                            href="<?= (@$_GET['lang'] == 'eng' ? $sub->slug . '?lang=eng' : $sub->slug); ?>"
+                                    <li class="dropdown"><a class="nav-link scrollto <?php if ($sub->slug != "") {
+                                                                                                        if ($this->uri->segment(1) == $sub->slug) {
+                                                                                                            echo "active";
+                                                                                                        }
+                                                                                                    } else {
+                                                                                                        if ($this->uri->segment(1) == "") {
+                                                                                                            echo "active";
+                                                                                                        }
+                                                                                                    } ?>"
+                                            href="<?= base_url() . (@$_GET['lang'] == 'eng' ? $sub->slug . '?lang=eng' : $sub->slug); ?>"
                                             onclick="window.location.href='<?= (@$_GET['lang'] == 'eng' ? $sub->slug . '?lang=eng' : $sub->slug) ?>';"><?= @$_GET['lang'] == 'eng' ? $sub->title_eng : $sub->title_indo ?></a>
                                     </li>
                                     <?php } ?>
@@ -180,7 +222,7 @@ function hari($date)
                             <?= @$_GET['lang'] == 'eng' ? 'Contact Now' : 'Hubungi Sekarang'; ?></a>
                     </div>
 
-                    <div class="ms-lg-auto btn-contact d-lg-none d-block" style="width: max-content;">
+                    <div class="ms-lg-auto btn-contact d-lg-none d-block ms-3" style="width: max-content;">
                         <a href="<?= $waLink2; ?>" target="_blank"
                             class="nav-item nav-link bg-blue rounded-20 py-2 px-3 d-flex align-items-center text-white">
                             <i class="fa fa-phone me-2 fs-4" aria-hidden="true"></i>

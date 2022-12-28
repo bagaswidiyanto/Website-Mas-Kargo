@@ -9,6 +9,15 @@
     <div class="container-xxl py-5 px-lg-5">
         <div class="header-title" data-aos="fade-up" data-aos-duration="1000">
             <h2><?= @$_GET['lang'] == 'eng' ? 'CONTACT US' : 'HUBUNGI KAMI' ?></h2>
+            <?php
+            if (isset($msg)) {
+                header("refresh:2;" . base_url('kontak'));
+            }
+            ?>
+
+            <div class="mt-5">
+                <strong><?= @$msg; ?></strong>
+            </div>
         </div>
         <div class="row justify-content-center mt-5">
             <div class="col-lg-12">
@@ -144,15 +153,7 @@
                             <?= @$_GET['lang'] == 'eng' ? 'UPLOAD' : 'UNGGAH' ?></a>
                     </div>
 
-                    <?php
-                    if (isset($msg)) {
-                        header("refresh:2;" . base_url('mitra'));
-                    }
-                    ?>
 
-                    <div class="mt-5">
-                        <strong><?= @$msg; ?></strong>
-                    </div>
                 </div>
             </div>
         </div>
@@ -222,7 +223,7 @@
                                 </p>
                                 <div class="mb-3">
                                     <label><?= @$_GET['lang'] == 'eng' ? 'Form File' : 'Berkas Formulir' ?></label>
-                                    <input name="file" class="form-control" type="file" class="alt"
+                                    <input name="file_name" class="form-control" type="file" class="alt"
                                         accept="application/pdf" required />
                                 </div>
                                 <div class="row">

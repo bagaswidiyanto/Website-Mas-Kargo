@@ -385,62 +385,69 @@
                         <div class="swiper-wrapper">
                             <?php foreach ($testi as $t) { ?>
                             <div class="swiper-slide">
-                                <div class="testi-box bg-white rounded-20 px-4 py-3">
-                                    <div class="d-flex align-items-center">
-                                        <div class="border-img d-flex justify-content-center align-items-center me-4">
-                                            <img src="https://maskargo.digitalindo.co.id/upload/testimoni/<?= $t->image; ?>"
-                                                class="img-fluid" alt="">
+                                <a href="<?= base_url(); ?>testimoni/detail/<?= $t->id; ?>">
+                                    <div class="testi-box bg-white rounded-20 px-4 py-3">
+                                        <div class="d-flex align-items-center h-box">
+                                            <div
+                                                class="border-img d-flex justify-content-center align-items-center me-4">
+                                                <img src="https://maskargo.digitalindo.co.id/upload/testimoni/<?= $t->image; ?>"
+                                                    class="img-fluid" alt="">
+                                            </div>
+                                            <div class="profil">
+                                                <h5><?= $t->nama; ?></h5>
+                                                <small><?= $t->jabatan; ?></small>
+                                            </div>
                                         </div>
-                                        <div class="profil">
-                                            <h5><?= $t->nama; ?></h5>
-                                            <small><?= $t->jabatan; ?></small>
-                                        </div>
-                                    </div>
-                                    <div class="star d-flex">
-                                        <?php if ($t->rating == 5) { ?>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <?php } else if ($t->rating == 4) { ?>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <?php } else if ($t->rating == 3) { ?>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <?php } else if ($t->rating == 2) { ?>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <?php } else if ($t->rating == 1) { ?>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <?php } else { ?>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <?php } ?>
+                                        <div class="star d-flex">
+                                            <?php if ($t->rating == 5) { ?>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <?php } else if ($t->rating == 4) { ?>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <?php } else if ($t->rating == 3) { ?>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <?php } else if ($t->rating == 2) { ?>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <?php } else if ($t->rating == 1) { ?>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <?php } else { ?>
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <?php } ?>
 
 
+                                        </div>
+                                        <div class="deskripsi">
+                                            <?php if (strlen($t->testi) > 90) { ?>
+                                            <p><?= substr($t->testi, 0, 90); ?> ...</p>
+                                            <?php } else { ?>
+                                            <p><?= substr($t->testi, 0, 90); ?></p>
+                                            <?php } ?>
+                                        </div>
                                     </div>
-                                    <div class="deskripsi">
-                                        <p><?= $t->testi; ?></p>
-                                    </div>
-                                </div>
+                                </a>
                             </div>
                             <?php } ?>
                         </div>

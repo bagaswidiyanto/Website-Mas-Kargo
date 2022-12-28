@@ -10,12 +10,28 @@
 .layanan .nav-tabs .nav-link {
     color: #000;
     padding: 5px 1rem;
+    position: relative;
+}
+
+.layanan .nav-tabs .nav-link::before {
+    content: '';
+    position: absolute;
+    top: 14px;
+    left: 0;
+    background: #000;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
 }
 
 .layanan .nav-tabs .nav-link.active, .layanan .nav-tabs .nav-link:hover {
     color: #0D438D ;
     background-color: transparent;
     border-color: transparent;
+}
+
+.layanan .nav-tabs .nav-link:hover::before {
+    background: #0D438D;
 }
 
 .layanan .tab-content .border-row {

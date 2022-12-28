@@ -22,7 +22,7 @@ class Mitra extends MY_Controller
     // $this->middle = 'content/v_vendor'; // untuk loading page homenya. rubah pada bagian ini untuk halaman lainnya.
     // $this->layout();
     // } else {
-    $lamaran = $_FILES['file']['name'];
+    $lamaran = $_FILES['file_name']['name'];
     $office_picture = $_FILES['office_picture']['name'];
     $team_picture = $_FILES['team_picture']['name'];
     $vehicle_picture = $_FILES['vehicle_picture']['name'];
@@ -32,7 +32,7 @@ class Mitra extends MY_Controller
     if ($lamaran !== "" || $office_picture !== "" || $team_picture !== "" || $vehicle_picture !== "") {
 
       //form
-      $lamaranname = $_FILES["file"]["name"];
+      $lamaranname = $_FILES["file_name"]["name"];
       $file_extension = pathinfo($lamaranname, PATHINFO_EXTENSION);
       $namalamaran = md5(date('Y-m-d H:i:s')) . '.' . $file_extension;
 
@@ -51,7 +51,7 @@ class Mitra extends MY_Controller
         $dir_exist = false; // dir not exist
       }
 
-      if (!$this->upload->do_upload('file')) {
+      if (!$this->upload->do_upload('file_name')) {
         $this->data["msg"] = '<div class="alert alert-danger text-center">Format file harus dalam bentuk .PDF</div>';
         $this->middle = 'content/v_vendor'; // untuk loading page homenya. rubah pada bagian ini untuk halaman lainnya.
         $this->layout();

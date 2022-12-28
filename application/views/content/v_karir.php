@@ -24,8 +24,7 @@
                     </div>
                     <div class="col-lg-3 col-10 mt-4 mt-lg-0">
                         <div class="search">
-                            <input id="mySearch" onkeyup="myFunction()" type="text" placeholder="Cari"
-                                class="form-control">
+                            <input id="mySearch" onkeyup="myFunction()" type="text" placeholder="Cari" class="form-control">
                         </div>
                     </div>
                     <div class="col-lg-1 col-2 mt-4 mt-lg-0">
@@ -92,34 +91,32 @@
         }
         ?>
         <div class="box-karir" id="content">
-            <?php foreach ($this->db->query("SELECT * FROM tbl_karir ORDER BY sort ASC")->result() as $k) { ?>
-            <div class="conten-karir py-5" id="karir" data-aos="fade-up" data-aos-duration="1000">
-                <div class="row align-items-center text-center">
-                    <div class="col-lg-3 col-12">
-                        <div class="img">
-                            <img src="https://maskargo.digitalindo.co.id/upload/<?= $website->image; ?>"
-                                class="img-fluid" alt="">
+            <?php foreach ($this->db->query("SELECT * FROM tbl_karir WHERE aktif = 1 ORDER BY sort ASC")->result() as $k) { ?>
+                <div class="conten-karir py-5" id="karir" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="row align-items-center text-center">
+                        <div class="col-lg-3 col-12">
+                            <div class="img">
+                                <img src="https://maskargo.digitalindo.co.id/upload/<?= $website->image; ?>" class="img-fluid" alt="">
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
-                        <div class="corporation">
-                            <h5><?= $k->posisi; ?></h5>
-                            <p><?= $k->posisi; ?> PT. Merpati Alam Semesta (Maskargo)<br>Jakarta Timur, Indonesia</p>
+                        <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
+                            <div class="corporation">
+                                <h5><?= $k->posisi; ?></h5>
+                                <p><?= $k->posisi; ?> PT. Merpati Alam Semesta (Maskargo)<br>Jakarta Timur, Indonesia</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
-                        <div class="post-date">
-                            <p>Posted <?= time_ago($k->create_date); ?></p>
+                        <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
+                            <div class="post-date">
+                                <p>Posted <?= time_ago($k->create_date); ?></p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
-                        <div class="btn-selengkapnya">
-                            <a href="<?= @$_GET['lang'] == 'eng' ? base_url() . 'karir/detail_karir/' . $k->slug . '?lang=eng' : base_url() . 'karir/detail_karir/' . $k->slug ?>"
-                                class="btn bg-blue py-2 px-3 fw-bold border-0">Selengkapnya</a>
+                        <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
+                            <div class="btn-selengkapnya">
+                                <a href="<?= @$_GET['lang'] == 'eng' ? base_url() . 'karir/detail_karir/' . $k->slug . '?lang=eng' : base_url() . 'karir/detail_karir/' . $k->slug ?>" class="btn bg-blue py-2 px-3 fw-bold border-0">Selengkapnya</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
             <?php } ?>
         </div>
     </div>
@@ -127,19 +124,19 @@
 
 
 <script>
-function myFunction() {
-    var input, filter, karir, h5, i;
-    input = document.getElementById("mySearch");
-    filter = input.value.toUpperCase();
-    content = document.getElementById("content");
-    karir = content.getElementById("karir");
-    for (i = 0; i < karir.length; i++) {
-        h5 = karir[i].getElementsByTagName("h5")[0];
-        if (h5.innerHTML.toUpperCase().indexOf(filter) > -1) {
-            karir[i].style.display = "";
-        } else {
-            karir[i].style.display = "none";
+    function myFunction() {
+        var input, filter, karir, h5, i;
+        input = document.getElementById("mySearch");
+        filter = input.value.toUpperCase();
+        content = document.getElementById("content");
+        karir = content.getElementById("karir");
+        for (i = 0; i < karir.length; i++) {
+            h5 = karir[i].getElementsByTagName("h5")[0];
+            if (h5.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                karir[i].style.display = "";
+            } else {
+                karir[i].style.display = "none";
+            }
         }
     }
-}
 </script>

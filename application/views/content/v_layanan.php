@@ -45,6 +45,7 @@
 
                     <li class="nav-item">
                         <a href="#tab-<?= $l->id ?>" class="nav-link"
+                            title="<?= @$_GET['lang'] == 'eng' ? $l->title_eng : $l->title ?>"
                             data-bs-toggle="tab"><?= @$_GET['lang'] == 'eng' ? $l->title_eng : $l->title ?></a>
                     </li>
                     <?php } ?>

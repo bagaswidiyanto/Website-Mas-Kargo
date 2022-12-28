@@ -718,11 +718,17 @@ ul {
 
 
 /*** Testimoni Home ***/
+.testimoni-home .testi-box .h-box {
+    height: 105px;
+}
+
 .testimoni-home .testi-box img {
     border-radius: 50%;
     width: 80px;
     /* height: 80px; */
 }
+
+
 
 .testimoni-home .testi-box .star i {
     font-size: 26px;
@@ -778,9 +784,9 @@ ul {
 .footer::after {
     position: absolute;
     content: "";
-    width: 45%;
+    width: 40%;
     height: 100%;
-    border-bottom: 280px solid #fff;
+    border-bottom: 240px solid #fff;
     border-left: 200px solid transparent;
     bottom: 0;
     right: 0;
@@ -788,7 +794,7 @@ ul {
 }
 
 .footer .contact .btn-social {
-    margin-right: 10px;
+    margin-right: 15px;
     width: 36px;
     height: 36px;
     display: flex;
@@ -802,7 +808,7 @@ ul {
 }
 
 .footer .contact .btn-social i {
-    font-size: 26px;
+    font-size: 20px;
 }
 
 .footer .store img {
@@ -811,6 +817,7 @@ ul {
 
 .footer .information .address p {
     color: #fff;
+    font-size: 14px;
 }
 
 .footer .information .address p a {
@@ -818,6 +825,7 @@ ul {
 }
 .footer .quick ul li a {
     color: #fff;
+    font-size: 14px;
 }
 
 .footer .quick ul li i {

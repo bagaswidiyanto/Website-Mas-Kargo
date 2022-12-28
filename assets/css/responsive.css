@@ -113,6 +113,9 @@
 }
 
 @media only screen and (max-width: 600px) {
+    .header .navbar-brand img {
+        max-width: 65%;
+        }
     .service .nav-tabs .nav-link {
         font-size: 10px;
     }
@@ -190,7 +193,7 @@
 
     .footer::after {
         width: 100%;
-        border-bottom: 250px solid #fff;
+        border-bottom: 195px solid #fff;
         border-left: 60px solid transparent;
     }
 }
@@ -199,16 +202,16 @@
 
 @media only screen and (min-width: 1200px) and (max-width: 1400px)  {
     .footer::after {
-        width: 45%;
-        border-bottom: 330px solid #fff;
+        width: 40%;
+        border-bottom: 240px solid #fff;
         border-left: 200px solid transparent;
     }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px)  {
     .footer::after {
-        width: 45%;
-        border-bottom: 380px solid #fff;
+        width: 41%;
+        border-bottom: 265px solid #fff;
         border-left: 200px solid transparent;
     }
 }

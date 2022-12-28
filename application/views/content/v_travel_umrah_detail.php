@@ -23,21 +23,22 @@
         </div>
         <div class="single py-5 text-center">
             <div class="img">
-                <img src="https://maskargo.digitalindo.co.id/upload/travel_umrah/<?= $travel_umrah->image; ?>" alt="">
+                <img src="https://maskargo.digitalindo.co.id/upload/travel_umrah/<?= $travelumrah->image; ?>" alt="">
             </div>
             <div class="price my-3">
-                <h4>Rp<?= number_format($travel_umrah->price, 0, ",", "."); ?></h4>
+                <h4>Rp<?= number_format($travelumrah->price, 0, ",", "."); ?></h4>
             </div>
             <div class="nama">
-                <h3 class="fw-bold"><?= $travel_umrah->nama; ?></h3>
+                <h3 class="fw-bold"><?= $travelumrah->nama; ?></h3>
             </div>
+
             <div class="deskripsi mt-5 text-start">
                 <h2 class="mb-4">Deskripsi</h2>
-                <?= $travel_umrah->deskripsi; ?>
+                <?= $travelumrah->deskripsi; ?>
             </div>
         </div>
 
-        <a href="<?= base_url() ?>toko" class="mt-5 text-blue">
+        <a href="<?= base_url() ?>travelumrah" class="mt-5 text-blue">
             <- Back</a>
     </div>
 </div>

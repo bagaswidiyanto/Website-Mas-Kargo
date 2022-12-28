@@ -3,10 +3,9 @@
         <div class="swiper-container hero-toko-slider">
             <div class="swiper-wrapper">
                 <?php foreach ($slider as $s) { ?>
-                <div class="swiper-slide">
-                    <img src="https://maskargo.digitalindo.co.id/upload/slider_toko/<?= $s->image; ?>" class="img-fluid"
-                        alt="">
-                </div>
+                    <div class="swiper-slide">
+                        <img src="https://maskargo.digitalindo.co.id/upload/slider_toko/<?= $s->image; ?>" class="img-fluid" alt="">
+                    </div>
                 <?php } ?>
             </div>
             <div class="swiper-pagination"></div>
@@ -28,6 +27,7 @@
             <div class="price my-3">
                 <h4>Rp<?= number_format($wisatahalal->price, 0, ",", "."); ?></h4>
             </div>
+
             <div class="nama">
                 <h3 class="fw-bold"><?= $wisatahalal->nama; ?></h3>
             </div>
@@ -37,7 +37,7 @@
             </div>
         </div>
 
-        <a href="<?= base_url() ?>toko" class="mt-5 text-blue">
+        <a href="<?= base_url() ?>wisatahalal" class="mt-5 text-blue">
             <- Back</a>
     </div>
 </div>

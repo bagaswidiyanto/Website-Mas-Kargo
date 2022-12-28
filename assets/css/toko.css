@@ -49,4 +49,9 @@
     padding-left: 10px;
 }
 
+.toko-detail .deskripsi ul {
+    list-style: disc;
+    padding-left: 2rem;
+}
+
 

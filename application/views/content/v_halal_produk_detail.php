@@ -32,13 +32,14 @@
             <div class="nama">
                 <h3 class="fw-bold"><?= $halalproduk->nama; ?></h3>
             </div>
+
             <div class="deskripsi mt-5 text-start">
                 <h2 class="mb-4">Deskripsi</h2>
                 <?= $halalproduk->deskripsi; ?>
             </div>
         </div>
 
-        <a href="<?= base_url() ?>toko" class="mt-5 text-blue">
+        <a href="<?= base_url() ?>halalproduk" class="mt-5 text-blue">
             <- Back</a>
     </div>
 </div>

@@ -23,6 +23,39 @@
 }
 
 
+.gallery .nav-tabs .nav-item {
+  width: 100%;
+}
+
+.gallery .nav-tabs .nav-link {
+  color: #000;
+  padding: 5px 1rem;
+  position: relative;
+}
+
+.gallery .nav-tabs .nav-link::before {
+  content: '';
+  position: absolute;
+  top: 14px;
+  left: 0;
+  background: #000;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}
+
+.gallery .nav-tabs .nav-link.active,
+.gallery .nav-tabs .nav-link:hover {
+  color: #0D438D;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.gallery .nav-tabs .nav-link:hover::before {
+  background: #0D438D;
+}
+
+
 .gallery .portfolio-wrap {
     transition: 0.3s;
     position: relative;
